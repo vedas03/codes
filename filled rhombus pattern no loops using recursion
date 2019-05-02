@@ -1,0 +1,18 @@
+n=int(input())
+def pri(n,i):
+    if(i>n):
+        return
+    else:
+        print(" "*(n-i),end="")
+        print("* "*i)
+        i+=1
+        pri(n,i)
+def pri1(n,i):
+    if(i==0):
+        return
+    else:
+        print(" "*(n-i+1),end="")
+        print("* "*i)
+        pri1(n,i-1)
+pri(n,1)
+pri1(n-1,n-1)
