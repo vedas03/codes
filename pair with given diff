@@ -1,0 +1,19 @@
+l=list(map(int,input().split()))
+su=int(input())
+dict={}
+flag=0
+for i in l:
+    dict[i]=1
+for i in dict.keys():
+    try:
+        if(dict[(su+i)]==1):
+            print("yes")
+            flag=1
+            print(i,su+i)
+            break
+    except:
+        pass
+            
+
+if(flag==0):
+    print("NO")
