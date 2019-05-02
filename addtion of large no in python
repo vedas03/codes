@@ -1,0 +1,47 @@
+a=input()
+b=input()
+l=[]
+la=len(a)
+lb=len(b)
+if(lb>la):
+    a="0"*(lb-la)+a
+else:
+    b="0"*(la-lb)+b
+#print(a)
+#print(b)
+#print(l)
+ta=a[::-1]
+tb=b[::-1]
+#print(ta)
+#print(tb)
+la=len(a)
+lb=len(b)
+flag=0
+i=0
+s=""
+
+while(la>0 and lb>0):
+    t=int(ta[i])+int(tb[i])+flag
+    #print(t)
+    if(t>9):
+        flag=1
+    else:
+        flag=0
+    tt=t%10
+    l.append(tt)
+    la-=1
+    lb-=1
+    i+=1
+'''if(la==0):
+    for i in range(i,lb):
+        l.append(tb[i])
+else:
+    for i in range(i,la):
+        l.append(ta[i])
+    '''
+l.reverse()
+for k in l:
+    s+=str(k)
+print(s)
+
+
